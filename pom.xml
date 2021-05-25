@@ -12,21 +12,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
   <build>
-    <plugins>
-      <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>7.9.Final</version>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        
+    <plugins>   
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
@@ -36,6 +22,21 @@
                 <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
         </plugin>
+      <plugin>
+<groupId>org.jboss.as.plugins</groupId>
+<artifactId>jboss-as-maven-plugin</artifactId>
+<version>7.9.Final</version>
+<configuration>
+<force>true</force>
+<jboss-as.deploy.hostname>localhost</jboss-as.deploy.hostname> <!-- Where to deploy. -->
+<jboss-as.deploy.user>admin</jboss-as.deploy.user>
+<jboss-as.deploy.pass>welcome*1</jboss-as.deploy.pass>
+<plugin.war.warName>my-app-1.0-SNAPSHOT</plugin.war.warName>
+<fileNames>
+<fileName>target/my-app-1.0-SNAPSHOT.war</fileName>
+</fileNames>
+</configuration>
+</plugin>
         
     </plugins>
   </build>
