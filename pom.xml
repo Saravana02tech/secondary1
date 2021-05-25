@@ -11,13 +11,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
-  <plugin>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>4.0.0</version>
-    <configuration>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-    </configuration>
- </plugin>
+ 
  
   <dependencies>
     <dependency>
