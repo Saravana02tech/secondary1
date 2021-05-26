@@ -33,7 +33,7 @@
      <jboss-as.deploy.pass>welcome*1</jboss-as.deploy.pass>
      <plugin.war.warName>my-app-1.0-SNAPSHOT</plugin.war.warName>
      <fileNames>
-     <fileName>target/my-app-1.0-SNAPSHOT.war</fileName>
+     <fileName>C:\Users\sarav\.jenkins\workspace\tenet 2\target\my-app-1.0-SNAPSHOT.war</fileName>
      </fileNames>
      </configuration>
      </plugin>
